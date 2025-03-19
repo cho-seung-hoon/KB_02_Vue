@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS3 Position Property</title>
+    <style>
+      #main {
+        position: relative;
+        border: 1px solid black;
+        width: 500px;
+        height: 70px;
+        overflow: hidden;
+      }
+      .box {
+        background-color: red;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+      }
+      .box:nth-child(1) {
+        left: 0px;
+        top: 0px;
+        z-index: 10;
+      }
+      .box:nth-child(2) {
+        left: 20px;
+        top: 20px;
+        background-color: blue;
+        z-index: 5;
+      }
+      .box:nth-child(3) {
+        left: 40px;
+        top: 40px;
+        background-color: green;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor amet</h1>
+    <div id="main">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor amet</h1>
+  </body>
+</html>

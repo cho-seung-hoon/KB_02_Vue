@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function outerFn(x) {
+        return function (y) {
+          return x + y;
+        };
+      }
+
+      //outerFn 호출
+      outerFn(10); // function(y) { return 10 + y; }
+
+      console.log(outerFn(10));
+    </script>
+  </body>
+</html>
