@@ -4,7 +4,6 @@
     <title>Bootstrap 5</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- css -> 서드파티 -> 나의 스타일 배치치 -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -17,98 +16,148 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar w/ text</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <div class="mt-4 p-5 bg-primary text-white">
+        <h1>FullStack Study</h1>
+        <p>Vue+자바 기반의 풀스택 기술을 배웁니다.</p>
+      </div>
+      <div>
+        <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <i class="fa-solid fa-house"></i>FullStack
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">메뉴1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">메뉴2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">메뉴3</a>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav align-items-center">
+                <li class="nav-item d-flex align-items-center me-3">
+                  <img
+                    src="./망.jpeg"
+                    style="width: 40px"
+                    class="rounded-pill me-2"
+                  />
+                  <span class="text-white">admin</span>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i> 로그아웃
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div>
+        <h1 class="mt-5"><i class="fa-solid fa-list"></i>글 목록</h1>
+      </div>
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>등록일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><a href="#">글 제목1</a></td>
+              <td>user01</td>
+              <td>2025-03-21</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href="#">글 제목2</a></td>
+              <td>user01</td>
+              <td>2025-03-21</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href="#">글 제목3</a></td>
+              <td>user01</td>
+              <td>2025-03-21</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><a href="#">글 제목4</a></td>
+              <td>user01</td>
+              <td>2025-03-21</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><a href="#">글 제목5</a></td>
+              <td>user01</td>
+              <td>2025-03-21</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="d-flex align-items-center">
+          <div class="flex-grow-1 d-flex justify-content-center">
+            <ul class="pagination mb-0">
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <i class="fa-solid fa-angles-left"></i>
+                </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <i class="fa-solid fa-angle-left"></i>
+                </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+              <li class="page-item"><a class="page-link" href="#">7</a></li>
+              <li class="page-item active">
+                <a class="page-link" href="#">8</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">9</a></li>
+              <li class="page-item"><a class="page-link" href="#">10</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <i class="fa-solid fa-angle-right"></i>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <i class="fa-solid fa-angles-right"></i>
+                </a>
               </li>
             </ul>
-            <span class="navbar-text">
-              Navbar text with an inline element
-            </span>
           </div>
-        </div>
-      </nav>
-      <h1>글 목록</h1>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>No</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>등록일</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td><a href="#">글 제목1</a></td>
-            <td>user01</td>
-            <td>2025-03-21</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td><a href="#">글 제목2</a></td>
-            <td>user01</td>
-            <td>2025-03-21</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td><a href="#">글 제목3</a></td>
-            <td>user01</td>
-            <td>2025-03-21</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td><a href="#">글 제목4</a></td>
-            <td>user01</td>
-            <td>2025-03-21</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td><a href="#">글 제목5</a></td>
-            <td>user01</td>
-            <td>2025-03-21</td>
-          </tr>
-        </tbody>
-      </table>
-      <ul class="pagination justify-content-center">
-        <li class="page-item disabled">
-          <a class="page-link" href="#"><span aria-hidden="true"><</span></a>
-        </li>
-        <li class="page-item"><a class="page-link" href="#">1</a></li>
-        <li class="page-item"><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#"><span aria-hidden="true">></span></a>
-        </li>
-      </ul>
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button type="submit" class="btn btn-primary">글쓰기</button>
-      </div>
-    </div>
 
-    <!-- 의존하는 js -> 나의 js 순으로 배치 -->
+          <button class="btn btn-primary btn-sm ms-auto">
+            <i class="fa-regular fa-pen-to-square"></i> 글 쓰기
+          </button>
+        </div>
+      </div>
+      <footer class="d-flex justify-content-center mt-5">
+        <p class="text-secondary">©2025.03 created by fullstack</p>
+      </footer>
+    </div>
     <script src="./bootstrap.bundle.min.js"></script>
   </body>
 </html>
