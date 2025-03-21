@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Bootstrap 5</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css -> 서드파티 -> 나의 스타일 배치치 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fa-solid fa-pen-to-square"></i>새 글쓰기</h1>
+      <form>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">제목</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >작성자</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >내용</label
+          >
+          <textarea
+            class="form-control"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+        <br />
+        <button class="btn btn-primary">
+          <i class="fa-solid fa-check"></i>확인
+        </button>
+        <button class="btn btn-primary">
+          <i class="fa-solid fa-rotate-left"></i>취소
+        </button>
+        <button class="btn btn-primary">
+          <i class="fa-solid fa-list"></i>목록
+        </button>
+      </form>
+    </div>
+
+    <!-- 의존하는 js -> 나의 js 순으로 배치 -->
+    <script src="./bootstrap.bundle.min.js"></script>
+  </body>
+</html>

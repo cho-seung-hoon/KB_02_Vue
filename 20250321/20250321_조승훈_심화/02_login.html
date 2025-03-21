@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Bootstrap 5</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- css -> 서드파티 -> 나의 스타일 배치치 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fa-solid fa-right-to-bracket"></i> 로그인</h1>
+      <form>
+        <div class="mb-3">
+          <label for="InputID" class="form-label"
+            ><i class="fa-solid fa-user"></i> 사용자 ID</label
+          >
+          <input type="text" class="form-control" id="InputID" />
+        </div>
+        <div class="mb-3">
+          <label for="InputPassword" class="form-label"
+            ><i class="fa-solid fa-lock"></i> 비밀번호</label
+          >
+          <input type="password" class="form-control" id="InputPassword" />
+        </div>
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-right-to-bracket"></i> 로그인
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- 의존하는 js -> 나의 js 순으로 배치 -->
+    <script src="./bootstrap.bundle.min.js"></script>
+  </body>
+</html>
