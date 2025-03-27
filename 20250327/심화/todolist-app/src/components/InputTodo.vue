@@ -20,28 +20,20 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  name: 'InputTodo',
-  data() {
-    return { todo: '' };
-  },
-  methods: {
-    // 추가 동작
-    addTodoHandler() {
-      if (this.todo.length >= 3) {
-        // 작성된 할일 (this.todo)을
-        // 부모 컴포넌트(App.vue)로 전달하기!
-        // -> 이벤트 발신(emit) 이용
+<script setup>
+import { ref } from 'vue';
+const todo = ref(''); // ref()에 등록된 값 접근 방법 : 변수명.value
+//부모로 방출할 이벤트 유효성 검사
+const emit = defineEmits(['add-todo']);
+// 추가 동작
+const addTodoHandler = () => {
+  if (todo.value.length >= 3) {
+    //부모 컴포넌트로 이벤트 발신
+    emit('add-todo', todo.value);
 
-        // $emit(이벤트명명, 페이로드) : 이벤트 발신(방출) 메서드
-        this.$emit('add-todo', this.todo);
-
-        this.todo = '';
-      } else {
-        alert('할 일은 3글자 이상으로 작성해주세요!!');
-      }
-    },
-  },
+    todo.value = '';
+  } else {
+    alert('할 일은 3글자 이상으로 작성해주세요!!');
+  }
 };
 </script>

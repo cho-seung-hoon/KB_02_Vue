@@ -2,39 +2,26 @@
   <div class="row">
     <div class="col">
       <ul class="list-group">
-        <!-- 할 일 목록 요소 컴포넌트 -->
-        <!-- props로 받은 데이터 수정 x
-            -> emit을 이용해서 부모로 전달하여 수정
-            
-            TodoItem -> TodoList -> App
-        -->
-        <TodolistItem
-          v-for="todo in todolist"
-          :todoitem="todo"
-          @toggle-completed="$emit('toggle-completed', $event)"
-          @delete-todo="$emit('delete-todo', $event)"
+        <TodoListItem
+          v-for="todo in todoList"
+          :todoItem="todo"
+          @toggle-completed="emit('toggle-completed', $event)"
+          @delete-todo="emit('delete-todo', $event)"
         />
-        <!-- $evnet : 자식 컴포넌트에서 방출된 payload 참조 변수 (id) -->
       </ul>
     </div>
   </div>
 </template>
-<script>
-import TodolistItem from './TodolistItem.vue';
 
-export default {
-  name: 'TodoList',
+<script setup>
+import TodoListItem from './TodolistItem.vue';
 
-  // 자식 컴포넌트 등록
-  components: { TodolistItem },
+// 부모로 부터 전달 받은 데이터 수신 + 유효성 검사
+const props = defineProps({
+  // 전달 받은 todoList는 배열 형태, 필수 데이터
+  todoList: { type: Array, required: true },
+});
 
-  // 부모로 부터 전달 받은데이터 수신 + 유효성 검사
-  props: {
-    // 전달 받은 todolist는 배열 형태, 필수 데이터
-    todolist: { type: Array, required: true },
-  },
-
-  // 부모 컴포넌트로 방출되는 이벤트 검사
-  emits: ['toggle-completed', 'delete-todo'],
-};
+// 부모 컴포넌트로 방출되는 이벤트 검사
+const emit = defineEmits(['toggle-completed', 'delete-todo']);
 </script>
