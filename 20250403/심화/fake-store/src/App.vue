@@ -1,16 +1,23 @@
+<!-- 루트 컴포넌트 -->
 <template>
   <DefaultLayout>
-    <!-- headr slot에 Header 컴포넌트 넣기 -->
+    <!-- 헤더 컴포넌트 표시 -->
     <template v-slot:header><Header /></template>
-    <!-- headr slot에 NavBar 컴포넌트 넣기 -->
+    <!-- 네비게이션 컴포넌트 표시 -->
     <template v-slot:navbar><NavBar /></template>
-    <!-- slot에 라우트된 페이지 끼워넣기기 -->
+
+    <!-- 라우터 뷰 컴포넌트 표시 -->
     <template v-slot:default><RouterView /></template>
+
+    <!-- 푸터 컴포넌트 표시 -->
+    <template v-slot:footer><Footer /></template>
   </DefaultLayout>
 </template>
+
 <script setup>
 import { RouterView } from 'vue-router';
 import DefaultLayout from './components/layouts/DefaultLayout.vue';
 import Header from './components/layouts/Header.vue';
-import NavBar from './components/layouts/Navbar.vue';
+import NavBar from './components/layouts/NavBar.vue';
+import Footer from './components/layouts/Footer.vue';
 </script>
